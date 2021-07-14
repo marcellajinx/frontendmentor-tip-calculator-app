@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+    <div class="container">
+        <h3>SPLI<br>TTER</h3>
+        <div class="app-container">
+            <div class="main">
+                <div class="kiri">
+                    <div class="bill">
+                        <p>Bill</p>
+                        <form action="#" class="gen">
+                            <img src="images/icon-dollar.svg" alt="dollar">
+                            <input type="number" id="bill" value=0.00 autocomplete="off">
+                        </form>
+                    </div>
+                    
+                    <div class="tips">
+                        <p>Select Tip</p>
+                        <div class="tips-container">
+                            <button class="tip" id="pertip" data-value=5>5%</button>
+                            <button class="tip" id="pertip" data-value=10>10%</button>
+                            <button class="tip" id="pertip" data-value=15>15%</button>
+                            <button class="tip" id="pertip" data-value=25>25%</button>
+                            <button class="tip" id="pertip" data-value=50>50%</button>
+                            <input type="number" class="tip" id="pertipc" placeholder="Custom" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div class="people-container">
+                        <p>Number of People <span id="people-err">Can't be zero</span></p>
+                        <form action="#" class="gen">
+                            <img src="images/icon-person.svg" alt="person">
+                            <input type="number" name="people" id="people" placeholder="0" autocomplete="off"> 
+                        </form>
+                    </div>  
+                </div>
+
+                <div class="kanan">
+                    <div class="results">
+                        <div class="result">
+                            <div class="res-text">
+                                <p>Tip Amount<br><span>/ person</span></p>
+                            </div>
+                            <div class="res-num">
+                                <p id="tip_per">$0.00</p>
+                            </div>
+                        </div>
+                        <div class="result">
+                            <div class="res-text">
+                                <p>Total<br><span>/ person</span></p>
+                            </div>
+                            <div class="res-num">
+                                <p id="total_per">$0.00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cta">
+                        <button class="cta-reset" onclick="reset()">RESET</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

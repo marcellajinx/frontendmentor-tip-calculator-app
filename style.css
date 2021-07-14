@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    font-family: 'Space Mono', monospace;
+    font-weight: bolder;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+::placeholder {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.gen {
+    margin-top: 0.5rem;
+}
+
+.gen ::placeholder {
+    text-align: right;
+}
+
+input {
+    background-color: hsl(189, 41%, 97%);
+    outline: none;
+    border: none;
+    padding: 0.4rem;
+    width: 100%;
+    color: hsl(183, 100%, 15%);
+    font-size: 16px;
+    font-family: 'Space Mono', monospace;
+    font-weight: bolder;
+    text-align: right;
+    border-radius: 3px;
+} 
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+input #bill, input #people {
+    transition: 0.3s;
+    position: relative;
+}
+
+input:focus {
+    border: 1px solid hsl(172, 67%, 45%);
+}
+
+input#pertipc.tip {
+    text-align: center;
+}
+
+
+form img {
+    position: absolute;
+    top: 0.6rem;
+    left: 0.8rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.res-text span {
+    color: hsl(184, 14%, 56%);
+    font-size: smaller;
+}
+
+.container h3 {
+    letter-spacing: 0.5rem;
+    text-align: center;
+    line-height: 1rem;
+    font-family: 'Space Mono', monospace;
+    font-weight: bolder;
+    color: hsl(186, 14%, 43%);
+}
+
+body {
+    background-color: hsl(185, 41%, 84%);
+}
+
+.container {
+    width: 50%;
+    margin: 5rem auto;
+    font-size: 12px;
+    font-family: 'Space Mono', monospace;
+    font-weight: bold;
+}
+
+.app-container {
+    margin-top: 3rem;
+    border-radius: 15px;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.kiri {
+    flex: 1;
+    color: hsl(186, 14%, 43%);
+    margin-right: 2rem;
+    position: relative;
+}
+
+.kanan {
+    padding: 1.3rem 2rem;
+    flex: 1;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 15px;
+    color: white;
+    font-weight: lighter;
+}
+
+.tips {
+    margin-top: 2rem;
+}
+
+.tips-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.tips-container button {
+    grid-row: auto;
+    grid-column: auto;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 4px;
+    text-align: center;
+    color: hsl(189, 41%, 97%);
+    font-weight: bolder;
+    font-size: 14px;
+    display: inline-block;
+    border: none;
+}
+
+.tips-container button:hover, .tips-container button:focus {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    transition: 0.3s;
+}
+
+.tips-container input[type="number"]{
+    color: hsl(186, 14%, 43%);
+    background-color: hsl(189, 41%, 97%);
+}
+
+.tips-container input[type="number"]:focus::placeholder  {
+    transition: 0.3s;
+    color: transparent;
+}
+
+#tip-custom {
+    background-color: hsl(189, 41%, 97%)hs;
+    color: hsl(186, 14%, 43%)
+}
+
+.people-container {
+    margin-top: 2rem;
+}
+
+p #people-err {
+    position: absolute;
+    right: 0;
+    color: transparent;
+}
+
+span#people-err.active {
+    color: red;
+}
+
+input:focus.active {
+    border: 1px solid rgb(240, 35, 35);
+    outline: 1px;
+}
+
+.cta button {
+    width: 100%;
+    padding: 8px;
+    cursor: pointer;
+    background-color: hsl(172, 67%, 45%);
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-size: medium;
+    font-weight: bolder;
+    color: hsl(183, 100%, 15%);
+    margin-top: 3rem;
+    font-family: 'Space Mono', monospace;
+    font-weight: bolder;
+}
+
+.cta button:hover {
+    background-color: hsl(185, 41%, 84%);
+    transition: 0.3s;
+}
+
+.result {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin: 1rem 0 2.5rem 0;
+}
+
+.res-text {
+    line-height: 1rem;
+    grid-row: auto;
+    grid-column: auto;
+}
+
+.res-num {
+    grid-row: auto;
+    grid-column: auto;
+    font-size: 24px;
+    color: hsl(172, 67%, 45%);
+    font-weight: bolder;
+    text-align: right;
+}
+
+@media only screen and (max-width: 1250px) {
+    .container {
+        width: 80%;
+    }
+
+
+    .tips-container {
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+        margin-top: 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 869px) {
+    .container {
+        width: 100%;
+        margin: 0;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+    .app-container {
+        margin: 0;
+        border-radius: 0;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+    }
+
+    .container h3 {
+        margin: 1.1rem 0;
+        line-height: 1.4rem;
+    }
+    
+    .kiri {
+        margin: 0;
+        margin-bottom: 1rem;
+        flex: 2;
+    }
+
+    .kanan {
+        flex: 1;
+    }
+
+    .gen {
+        margin-top: 0.1rem;
+    }
+
+    .tips{
+        margin: 1rem 0;
+    }
+
+    .cta-reset button {
+        margin-top: 0;
+        padding: 5px;
+    }
+
+    .tips p, .people-container p {
+        margin-top: 1rem;
+    }
+}
